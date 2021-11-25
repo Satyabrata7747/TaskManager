@@ -1,0 +1,10 @@
+.form {
+  max-width: 500px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+}
+button {
+  margin-left: 200px;
+  margin-top: 20px;
+}

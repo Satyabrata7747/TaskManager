@@ -1,0 +1,10 @@
+#head {
+  text-align: center;
+  color: red;
+}
+ul {
+  align-items: center;
+}
+.active {
+  border-bottom: 2px solid red;
+}

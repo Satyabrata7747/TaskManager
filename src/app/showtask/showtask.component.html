@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngIf="taskobj.length==0;else elseblock">No {{route}} Tasks Available</div>
+    <ng-template #elseblock>
+        <div *ngFor="let task of taskobj">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{task.title}}</h5>
+                    <p class="card-text">{{task.description}}</p>
+                    <p class="card-text">{{task.date}}</p>
+                    <button *ngIf="router=='inprogress'" type="button" class="btn btn-primary"
+                        (click)="complete(task)">Task
+                        Done</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
