@@ -9,6 +9,10 @@ import { Taskobj } from '../taskobj';
 export class TaskformComponent implements OnInit {
   constructor() {}
   submit(form: NgForm) {
+    if(form.value.title=='' || form.value.description=='' || form.value.date==''){
+      alert("Please enter all the fields");
+    }
+    else{
     const obj = new Taskobj(
       form.value.title,
       form.value.description,
@@ -19,6 +23,7 @@ export class TaskformComponent implements OnInit {
     localStorage.setItem(obj.title, JSON.stringify(obj));
     alert('Task Added Successfully');
     form.reset();
+    }
   }
   ngOnInit(): void {}
 }
